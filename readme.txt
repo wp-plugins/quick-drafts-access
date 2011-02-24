@@ -4,8 +4,8 @@ Donate link: http://coffee2code.com/donate
 Tags: draft, drafts, admin, menu, post, page, post_type, shortcut, coffee2code
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.0.1
-Version: 1.0.1
+Stable tag: 1.0.2
+Version: 1.0.2
 
 Adds a link to Drafts under the Posts, Pages, and other custom post type sections in the admin menu.
 
@@ -32,6 +32,8 @@ In addition, the plugin provides a count of the number of current drafts for tha
 The plugin hides the "Drafts" link when no drafts for that post type are present.  See the Filters section for how to override this behavior.
 
 Also, the menu item only appears for users who have the capability to edit posts of that post type.
+
+Links: [Plugin Homepage]:(http://coffee2code.com/wp-plugins/quick-drafts-access/) | [Author Homepage]:(http://coffee2code.com)
 
 
 == Installation ==
@@ -102,6 +104,9 @@ add_filter( 'c2c_quick_drafts_access_show_if_empty', '__return_true' );
 
 == Changelog ==
 
+= 1.0.2 =
+* Add link to plugin homepage to description in readme.txt
+
 = 1.0.1 =
 * Note compatibility with WP 3.1+
 * Update copyright date (2011)
@@ -112,6 +117,9 @@ add_filter( 'c2c_quick_drafts_access_show_if_empty', '__return_true' );
 
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+Trivial update: add link to plugin homepage to description in readme.txt
 
 = 1.0.1 =
 Trivial update: noted compatibility with WP 3.1+ and updated copyright date.

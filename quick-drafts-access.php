@@ -2,11 +2,11 @@
 /**
  * @package Quick_Drafts_Access
  * @author Scott Reilly
- * @version 1.0.1
+ * @version 1.0.2
  */
 /*
 Plugin Name: Quick Drafts Access
-Version: 1.0.1
+Version: 1.0.2
 Plugin URI: http://coffee2code.com/wp-plugins/quick-drafts-access/
 Author: Scott Reilly
 Author URI: http://coffee2code.com
