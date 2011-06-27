@@ -2,10 +2,10 @@
 Contributors: coffee2code
 Donate link: http://coffee2code.com/donate
 Tags: draft, drafts, admin, menu, post, page, post_type, shortcut, coffee2code
-Requires at least: 3.0
-Tested up to: 3.1
-Stable tag: 1.0.2
-Version: 1.0.2
+Requires at least: 3.1
+Tested up to: 3.2
+Stable tag: 1.1
+Version: 1.1
 
 Adds a link to Drafts under the Posts, Pages, and other custom post type sections in the admin menu.
 
@@ -33,7 +33,7 @@ The plugin hides the "Drafts" link when no drafts for that post type are present
 
 Also, the menu item only appears for users who have the capability to edit posts of that post type.
 
-Links: [Plugin Homepage]:(http://coffee2code.com/wp-plugins/quick-drafts-access/) | [Author Homepage]:(http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/quick-drafts-access/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -104,6 +104,13 @@ add_filter( 'c2c_quick_drafts_access_show_if_empty', '__return_true' );
 
 == Changelog ==
 
+= 1.1 =
+* Improved internationalization support
+* Note compatibility through WP 3.2+
+* Drop compatibility with versions of WP older than 3.1
+* Minor code refactoring and formatting changes
+* Fix plugin homepage and author links in description in readme.txt
+
 = 1.0.2 =
 * Add link to plugin homepage to description in readme.txt
 
@@ -117,6 +124,9 @@ add_filter( 'c2c_quick_drafts_access_show_if_empty', '__return_true' );
 
 
 == Upgrade Notice ==
+
+= 1.1 =
+Moderate update: noted compatibility through WP 3.2+; dropped support for versions of WP older than 3.1; improved internationalizion support
 
 = 1.0.2 =
 Trivial update: add link to plugin homepage to description in readme.txt
