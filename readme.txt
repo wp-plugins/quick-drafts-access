@@ -84,6 +84,8 @@ function my_qda_mods( $post_types ) {
     return $acceptable_post_types;
 }`
 
+.
+
 = c2c_quick_drafts_access_show_if_empty =
 
 The 'c2c_quick_drafts_access_show_if_empty' filter allows you to customize whether the 'Drafts' link will appear for a post type _when that post type currently has no drafts_.
