@@ -2,25 +2,21 @@
 /**
  * @package Quick_Drafts_Access
  * @author Scott Reilly
- * @version 1.1
+ * @version 1.1.1
  */
 /*
 Plugin Name: Quick Drafts Access
-Version: 1.1
+Version: 1.1.1
 Plugin URI: http://coffee2code.com/wp-plugins/quick-drafts-access/
 Author: Scott Reilly
 Author URI: http://coffee2code.com
 Description: Adds a link to Drafts under the Posts, Pages, and other custom post type sections in the admin menu.
 
-Compatible with WordPress 3.0+, 3.1+, 3.2+.
+Compatible with WordPress 3.0+, 3.1+, 3.2+, 3.3+.
 
 =>> Read the accompanying readme.txt file for instructions and documentation.
 =>> Also, visit the plugin's homepage for additional information and updates.
 =>> Or visit: http://wordpress.org/extend/plugins/quick-drafts-access/
-
-TODO:
-	* Update screenshots for WP3.2
-
 */
 
 /*

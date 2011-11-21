@@ -3,9 +3,9 @@ Contributors: coffee2code
 Donate link: http://coffee2code.com/donate
 Tags: draft, drafts, admin, menu, post, page, post_type, shortcut, coffee2code
 Requires at least: 3.1
-Tested up to: 3.2
-Stable tag: 1.1
-Version: 1.1
+Tested up to: 3.3
+Stable tag: 1.1.1
+Version: 1.1.1
 
 Adds a link to Drafts under the Posts, Pages, and other custom post type sections in the admin menu.
 
@@ -73,7 +73,8 @@ Arguments:
 
 Example:
 
-`add_filter( 'c2c_quick_drafts_access_post_types', 'my_qda_mods' );
+`
+add_filter( 'c2c_quick_drafts_access_post_types', 'my_qda_mods' );
 function my_qda_mods( $post_types ) {
     $acceptable_post_types = array();
     foreach ( $post_types as $post_type ) {
@@ -82,9 +83,8 @@ function my_qda_mods( $post_types ) {
             $acceptable_post_types[] = $post_type;
     }
     return $acceptable_post_types;
-}`
-
-.
+}
+`
 
 = c2c_quick_drafts_access_show_if_empty =
 
@@ -106,8 +106,12 @@ add_filter( 'c2c_quick_drafts_access_show_if_empty', '__return_true' );
 
 == Changelog ==
 
+= 1.1.1 =
+* Note compatibility through WP 3.3+
+* Update screenshots
+
 = 1.1 =
-* Improved internationalization support
+* Improve internationalization support
 * Note compatibility through WP 3.2+
 * Drop compatibility with versions of WP older than 3.1
 * Minor code refactoring and formatting changes
@@ -127,8 +131,11 @@ add_filter( 'c2c_quick_drafts_access_show_if_empty', '__return_true' );
 
 == Upgrade Notice ==
 
+= 1.1.1 =
+Trivial update: noted compatibility through WP 3.3+; updated screenshots
+
 = 1.1 =
-Moderate update: noted compatibility through WP 3.2+; dropped support for versions of WP older than 3.1; improved internationalizion support
+Moderate update: noted compatibility through WP 3.2+; dropped support for versions of WP older than 3.1; improved internationalization support
 
 = 1.0.2 =
 Trivial update: add link to plugin homepage to description in readme.txt
