@@ -5,9 +5,9 @@ Tags: draft, drafts, admin, menu, post, page, post_type, shortcut, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
-Tested up to: 3.4
-Stable tag: 1.1.2
-Version: 1.1.2
+Tested up to: 3.5
+Stable tag: 1.1.3
+Version: 1.1.3
 
 Adds a link to Drafts under the Posts, Pages, and other custom post type sections in the admin menu.
 
@@ -108,6 +108,12 @@ add_filter( 'c2c_quick_drafts_access_show_if_empty', '__return_true' );
 
 == Changelog ==
 
+= 1.1.3 =
+* Add check to prevent execution of code if file is directly accessed
+* Note compatibility through WP 3.5+
+* Update copyright date (2013)
+* Move screenshots into repo's assets directory
+
 = 1.1.2 =
 * Re-license as GPLv2 or later (from X11)
 * Add 'License' and 'License URI' header tags to readme.txt and plugin file
@@ -140,6 +146,9 @@ add_filter( 'c2c_quick_drafts_access_show_if_empty', '__return_true' );
 
 
 == Upgrade Notice ==
+
+= 1.1.3 =
+Trivial update: noted compatibility through WP 3.5+
 
 = 1.1.2 =
 Trivial update: noted compatibility through WP 3.4+; explicitly stated license
