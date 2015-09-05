@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Quick Drafts Access
- * Version:     2.0
+ * Version:     2.0.1
  * Plugin URI:  http://coffee2code.com/wp-plugins/quick-drafts-access/
  * Author:      Scott Reilly
  * Author URI:  http://coffee2code.com/
@@ -11,20 +11,22 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Description: Adds a link to Drafts under the Posts, Pages, and other custom post type sections in the admin menu.
  *
- * Compatible with WordPress 3.1 through 4.1+.
+ * Compatible with WordPress 3.1 through 4.3+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
  * =>> Or visit: https://wordpress.org/plugins/quick-drafts-access/
  *
+ * @package Quick_Drafts_Access
+ * @author  Scott Reilly
+ * @version 2.0.1
+ */
+
+/*
  * TODO:
  * - Add screen option checkboxes to control if menu links should appear?
  * - Cache user draft count; clear count when a post transitions to/from draft
  * - More unit tests
- *
- * @package Quick_Drafts_Access
- * @author  Scott Reilly
- * @version 2.0
  */
 
 /*
@@ -59,7 +61,7 @@ class c2c_QuickDraftsAccess {
 	 * @return string
 	 */
 	public static function version() {
-		return '2.0';
+		return '2.0.1';
 	}
 
 	/**
@@ -67,9 +69,22 @@ class c2c_QuickDraftsAccess {
 	 */
 	public static function init() {
 
+		// Hooke the admin init to load textdomain.
+		add_action( 'admin_init', array( __CLASS__, 'admin_init' ) );
+
 		// Hook the admin menu to add links to drafts.
 		add_action( 'admin_menu', array( __CLASS__, 'quick_drafts_access' ) );
 
+	}
+
+	/**
+	 * Adds hooks associated with the admin_init action.
+	 *
+	 * @since 2.0.1
+	 */
+	public static function admin_init() {
+		// Load textdomain.
+		load_plugin_textdomain( 'quick-drafts-access', false, basename( dirname( __FILE__ ) ) . DIRECTORY_SEPARATOR . 'lang' );
 	}
 
 	/**
@@ -165,7 +180,7 @@ class c2c_QuickDraftsAccess {
 							'', // page title is not applicable
 							$menu_text,
 							$post_type->cap->edit_posts,
-							add_query_arg( $query_vars, $path )
+							esc_url( add_query_arg( $query_vars, $path ) )
 						);
 
 					}
@@ -199,7 +214,7 @@ class c2c_QuickDraftsAccess {
 						'', // page title is not applicable
 						$menu_text,
 						$post_type->cap->edit_posts,
-						add_query_arg( $query_vars, $path )
+						esc_url( add_query_arg( $query_vars, $path ) )
 					);
 
 				}

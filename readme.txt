@@ -5,8 +5,8 @@ Tags: draft, drafts, admin, menu, multiuser, post, page, post_type, shortcut, co
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.1
-Tested up to: 4.1
-Stable tag: 2.0
+Tested up to: 4.3
+Stable tag: 2.0.1
 
 Adds links to 'All Drafts' and 'My Drafts' under the Posts, Pages, and other custom post type sections in the admin menu.
 
@@ -143,6 +143,11 @@ add_filter( 'c2c_quick_drafts_access_show_if_empty', '__return_true' );
 
 == Changelog ==
 
+= 2.0.1 (2015-09-04) =
+* Hardening: Escape the URLs used for the menu links.
+* Bugfix: Actually load the textdomain for translations.
+* Change: Note compatibility through WP 4.3+.
+
 = 2.0 (2015-02-23) =
 * Change 'Drafts' menu link text to 'All Drafts'
 * Add 'My Drafts' menu link that links directly to current user's drafts
@@ -167,7 +172,7 @@ add_filter( 'c2c_quick_drafts_access_show_if_empty', '__return_true' );
 * Change documentation links to wp.org to be https
 * Update banner and screenshot images
 * Add plugin icon
-* Regenerate .pot
+* Add .pot
 
 = 1.1.4 (2013-12-19) =
 * Minor documentation tweaks
@@ -215,6 +220,9 @@ add_filter( 'c2c_quick_drafts_access_show_if_empty', '__return_true' );
 
 
 == Upgrade Notice ==
+
+= 2.0.1 =
+Minor update: minor security hardening; actually load textdomain; noted compatibility through WP 4.3+
 
 = 2.0 =
 Substantial update: now there is the potential for 'All Drafts' and/or 'My Drafts' menu links; added localization support; noted compatibility through WP 4.1+; more
